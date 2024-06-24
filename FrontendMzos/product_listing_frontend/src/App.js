@@ -1,16 +1,17 @@
-import React from 'react';
 import './App.css';
-import AddProduct from './component/AddProduct';
-import ProductList from './component/ProductList';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header';
+import RoutingPath from './components/RoutingPath';
 
 function App() {
+
+
   return (
-    <div className="App">
-      <h1>Product Management App</h1>
-      <AddProduct />
-      <hr />
-      <ProductList />
-    </div>
+    <>
+      <Header />
+      <RoutingPath />
+
+    </>
   );
 }
 
