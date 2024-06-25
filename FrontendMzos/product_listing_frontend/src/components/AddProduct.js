@@ -31,7 +31,7 @@ const AddProduct = () => {
         <div>
             <Container>
                 <h2>Add Product</h2>
-                <Form onSubmit={handleSubmit} className='row g-3'>
+                <Form onSubmit={handleSubmit} className=' '>
                     <div className="col-md-6">
 
                         <Form.Group className="mb-3" controlId="name">

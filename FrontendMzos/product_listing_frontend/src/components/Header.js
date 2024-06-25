@@ -7,11 +7,11 @@ function Header() {
         <>
             <Navbar bg="dark" data-bs-theme="dark">
                 <Container>
-                    <Navbar.Brand href="#home">Product Listing</Navbar.Brand>
+                    <Navbar.Brand href="/home">TechStuff</Navbar.Brand>
                     <Nav className="me-auto">
                         <Nav.Link as={Link} to='/products' className='px-5'>Product List</Nav.Link>
                         <Nav.Link as={Link} to='/add' className='px-3'>Add Product</Nav.Link>
-                        
+
                     </Nav>
                 </Container>
             </Navbar>

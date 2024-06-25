@@ -42,7 +42,7 @@
 // src/components/ProductDelete.js
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Container, Button, Alert, Card } from 'react-bootstrap';
+import { Container, Button, Alert, Card, Row, Col } from 'react-bootstrap';
 
 function ProductDelete() {
     const { id } = useParams();
@@ -75,20 +75,24 @@ function ProductDelete() {
             <h1>Delete Product</h1>
             {message && <Alert variant="success">{message}</Alert>}
             <p>Are you sure you want to delete the following product?</p>
+            <Row className='g-4'>
+                <Col>
 
-            <Card className="shadow p-3 mb-5 bg-body rounded">
-                <Card.Img variant="top" src={product.imgUrl} height="80" width="30" />
-                <Card.Body>
-                    <Card.Title>{product.name}</Card.Title>
-                    <Card.Text>
-                        Id-{product.id} <br />
-                        Description-{product.description}<br />
-                        Price-{product.price}<br />
-                        Quatity-{product.quantity}<br />
-                    </Card.Text>
+                    <Card className="shadow  bg-body rounded">
+                        <Card.Img variant="top" src={product.imgUrl} />
+                        <Card.Body>
+                            <Card.Title>{product.name}</Card.Title>
+                            <Card.Text>
+                                Id-{product.id} <br />
+                                Description-{product.description}<br />
+                                Price-{product.price}<br />
+                                Quatity-{product.quantity}<br />
+                            </Card.Text>
 
-                </Card.Body>
-            </Card>
+                        </Card.Body>
+                    </Card>
+                </Col>
+            </Row>
             <Button variant="danger" onClick={handleDelete}>Delete</Button>
             <Link to="/" className="btn btn-secondary ml-2">Cancel</Link>
         </Container>
